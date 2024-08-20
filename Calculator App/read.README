@@ -1,0 +1,21 @@
+The code defines a simple calculator application using Python's Tkinter library for creating graphical user interfaces (GUIs). The main components and features of the code are:
+
+1. Class Definition (`calculator`):
+   - This class defines the calculator's GUI and functionality. The constructor method (`__init__`) initializes the application window, sets its properties (like title, size, and background color), and configures the icon.
+
+2. GUI Components:
+   - An `Entry` widget is used to display the equation or the result. It is configured with a white background and large, bold Arial font.
+   - Several `Button` widgets are arranged in a grid-like fashion, representing the numbers (`0-9`), operators (`+`, `-`, `*`, `/`, `%`), parentheses (`(` and `)`), a decimal point (`.`), a clear button (`C`), and an equal button (`=`). The buttons are color-coded (gray for most, red for the clear button, and orange for the equals button).
+
+3. Command Binding:
+   - Each button has a command associated with it, which triggers the corresponding method. For example, number and operator buttons call the `show()` method, which appends the button's value to the equation string and updates the display. The `=` button calls the `solve()` method to evaluate the expression using Python's `eval()` function. The `C` button clears the input using the `clear()` method.
+
+4. Functionality:
+   - The `show()` method appends the pressed button's value (number, operator, or symbol) to the equation, updating the display.
+   - The `solve()` method evaluates the current equation string using Python's `eval()` function and updates the display with the result.
+   - The `clear()` method resets the equation and clears the display.
+
+5. Main Window:
+   - The `Tk()` class is instantiated to create the main application window. The `calculator` object is instantiated with this window as an argument, and the `mainloop()` function starts the event loop to keep the application running.
+
+This calculator app handles basic arithmetic operations and allows the user to input and evaluate mathematical expressions.
